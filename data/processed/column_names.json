@@ -1,0 +1,13 @@
+[
+    "account_id",
+    "date",
+    "transaction_details",
+    "chq_no",
+    "value_date",
+    "withdrawal_amt",
+    "deposit_amt",
+    "balance_amt",
+    "category",
+    "city",
+    "device"
+]

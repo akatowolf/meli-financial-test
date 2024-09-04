@@ -1,0 +1,24 @@
+# Use the official Python image
+FROM python:3.11-slim
+
+# Set the working directory
+WORKDIR /app
+
+# Install required Python packages
+RUN pip install pandas mlflow
+
+# Copy the prediction script and input data
+COPY /src/predict.py /app/predict.py
+COPY /data/prediction/pred.json /app/pred.json
+
+# Expose the port (if needed, adjust as per your use case)
+EXPOSE 9696
+
+# Set environment variables (to be used by the prediction script)
+ENV MODEL_NAME=financial-xgboost
+ENV MODEL_VERSION=1
+ENV PROCESSED_DATA_PATH=/app/pred.json
+ENV PREDICTIONS_OUTPUT_PATH=/app/predictions.csv
+
+# Run the prediction script
+CMD ["python", "/app/predict.py"]
