@@ -8,7 +8,7 @@ The ML Project will be a prediction of account balance with Regression Algorithm
 ## Installation
 - **Prerequisites**: Python 3.11
 - **Setup**: 
-    1. git clone https://github.com/akatowolf/meli-financial-test.git
+    1. git clone -b master https://github.com/akatowolf/meli-financial-test.git
     2. Set up a new environment "python -m venv myvenv"
     3. Activate venv "myvenv\Scripts\activate"
     4. Install requirements.txt "pip install -r requirements.txt"
